@@ -160,7 +160,7 @@ func startVLCStream(streamData QualityType, port int) *exec.Cmd {
 	buffer.WriteString(streamData.Play)
 	buffer.WriteString("' --quiet --flv '-'")
 	buffer.WriteString("| vlc --intf=dummy --play-and-exit --rc-fake-tty -vvv - --sout '")
-	buffer.WriteString("#transcode{acodec=mp3,ab=72k}:standard{access=http,mux=ts,dst=:")
+	buffer.WriteString("#transcode{vcodec=none,acodec=mp3,ab=72k}:standard{access=http,mux=ts,dst=:")
 	buffer.WriteString(strconv.Itoa(port))
 	buffer.WriteString("}'")
 
