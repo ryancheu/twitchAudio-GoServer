@@ -52,6 +52,7 @@ func viewHandler(rw http.ResponseWriter, r *http.Request) {
 	port, success := getPortForUsername(username)
 
 	rw.Header().Set("Content-Type", "application/json")
+	rw.Header().Set("Access-Control-Allow-Origin", "*")
 	if success {
 		fmt.Fprint(rw, Response{"port": port})
 	} else {
