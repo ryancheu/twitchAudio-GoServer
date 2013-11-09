@@ -42,7 +42,7 @@ func (r Response) String() (s string) {
 const startPort = 6000
 const maxPorts = 1000
 const queryPort = 8080
-const bitrate = 45
+const bitrate = 48
 const refreshPeriod = 600 //In minutes
 
 var streams map[string]StreamInfo
